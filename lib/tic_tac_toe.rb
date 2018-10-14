@@ -66,3 +66,6 @@ turns_so_far = 0
     end
   end
 end
+
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+puts board
