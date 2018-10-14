@@ -68,8 +68,13 @@ turns_so_far = 0
   return turns_so_far
 end
 
-board = ["X", " ", " ", "X", " ", "O", " ", " ", " "]
-puts turn_count(board)
+def current_player(board)
+  if turn_count(board) % 2 == 0
+    "X"
+  elsif turn_count(board) % 2 == 1
+    "O"
+  end
+end
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combo|
