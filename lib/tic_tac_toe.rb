@@ -63,6 +63,8 @@ turns_so_far = 0
   board.each do |occurence|
     if occurence = "X" || occurence = "O"
       turns_so_far += 1
+    elsif occurence = " "
+      turns_so_far = turns_so_far
     end
   end
   return turns_so_far
