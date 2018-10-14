@@ -38,7 +38,6 @@ def valid_move?(board, index)
 end
 
 def move(board, index, player)
-player = current_player(board)
   if valid_move?(board, index) == true
     board[index] = player
   end
