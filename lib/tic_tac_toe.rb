@@ -41,6 +41,7 @@ def valid_move?(board, index)
 end
 
 def move(board, index, player)
+player = current_player(board)
   if valid_move?(board, index) == true
     board[index] = player
   end
@@ -128,4 +129,11 @@ unless won?(board) == false
   end
 end
 return nil
+end
+
+def play(board)
+  counter = 1
+  until over?(board) == true
+    turn(board)
+  end
 end
