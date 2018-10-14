@@ -39,3 +39,30 @@ def valid_move?(board, index)
     return false
   end
 end
+
+def move(board, index, player)
+  if valid_move?(board, index) == true
+    board[index] = player
+  end
+end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.chomp
+  index = input_to_index(input)
+  if valid_move?(board, index) == true
+    board[index] = "X"
+    display_board(board)
+  else
+  turn(board)
+end
+end
+
+def turn_count(board)
+turns_so_far = 0
+  board.each do |occurence|
+    if occurence = "X" || occurence = "O"
+      turns_so_far += 1
+    end
+  end
+end
