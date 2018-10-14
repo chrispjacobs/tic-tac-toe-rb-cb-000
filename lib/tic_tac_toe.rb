@@ -68,4 +68,4 @@ turns_so_far = 0
 end
 
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-puts board
+puts turn_count(board)
