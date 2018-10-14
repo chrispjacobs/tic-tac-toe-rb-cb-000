@@ -52,7 +52,7 @@ def turn(board)
   input = gets.chomp
   index = input_to_index(input)
   if valid_move?(board, index) == true
-    board[index] = "X"
+    board[index] = "#{current_player(board)}"
     display_board(board)
   else
   turn(board)
