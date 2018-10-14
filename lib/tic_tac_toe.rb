@@ -23,3 +23,11 @@ end
 def move(array, index, value = "X")
   array[index] = value
 end
+
+def position_taken?(board, index)
+  if board[index] == "X" || board[index] == "O"
+    return true
+  else
+    return false
+  end
+end
