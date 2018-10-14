@@ -68,5 +68,5 @@ turns_so_far = 0
   return turns_so_far
 end
 
-board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+board = ["X", " ", " ", "X", " ", "O", " ", " ", " "]
 puts turn_count(board)
