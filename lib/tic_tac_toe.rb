@@ -132,9 +132,10 @@ return nil
 end
 
 def play(board)
-  if over?(board) != true
+  until over?(board) == true
     turn(board)
-  elsif won?(board) == true
+  end
+  if won?(board) == true
     puts "Congratulations, #{winner(board)}! You won!"
   elsif draw?(board) == true
     puts "The game is over. It was a tie!"
